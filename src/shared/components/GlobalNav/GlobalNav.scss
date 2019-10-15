@@ -13,6 +13,7 @@
   }
 
   &__list {
+    display: flex;
     list-style: none;
     padding: 0;
     height: 100%;
@@ -20,10 +21,19 @@
   }
 
   &__item {
-    position: relative;
+    align-items: center;
     display: flex;
     height: 100%;
-    align-items: center;
+    margin: 0 20px;
+    position: relative;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__link {
@@ -33,14 +43,16 @@
     letter-spacing: 0.3px;
     text-decoration: none;
 
-    &:before {
-      background: $primary-color;
-      content: '';
-      display: block;
-      height: 4px;
-      width: 100%;
-      position: absolute;
-      top: 0;
+    &.active {
+      &:before {
+        background: $primary-color;
+        content: '';
+        display: block;
+        height: 4px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+      }
     }
   }
 }

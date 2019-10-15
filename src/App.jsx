@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import GlobalNav from './shared/components/GlobalNav/GlobalNav'
 import Testimonials from './views/Testimonials'
 
@@ -11,7 +11,8 @@ function App() {
       <BrowserRouter>
         <GlobalNav />
         <Switch>
-          <Route exact path="/" component={Testimonials} />
+          <Redirect exact from="/" to="/page-1" />
+          <Route exact path="/page-1" component={Testimonials} />
         </Switch>
       </BrowserRouter>
     </div>
