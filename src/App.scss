@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,900&display=swap');
+@import './variables';
+
+.body-app {
+  background-color: #f9faff;
+  height: 100vh;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  font-family: $primary-font;
+}
+
+.h-100 {
+  height: 100%;
+}
