@@ -26,7 +26,7 @@ describe('<GlobalNav />', () => {
   describe('GlobalNavContainer', () => {
     beforeEach(() => {
       const initialState = {
-        Bellotorio: {
+        Belloterio: {
           navItems: []
         }
       }

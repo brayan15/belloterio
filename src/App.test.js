@@ -4,7 +4,7 @@ import storeInit from '../__mocks__/store'
 import App from './App'
 
 const initialState = {
-  Bellotorio: {
+  Belloterio: {
     navItems: []
   }
 }

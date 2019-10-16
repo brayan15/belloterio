@@ -49,8 +49,8 @@ GlobalNav.defaultProps = {
   navItems: []
 }
 
-const mapStateToProps = ({ Bellotorio }) => ({
-  navItems: Bellotorio.navItems
+const mapStateToProps = ({ Belloterio }) => ({
+  navItems: Belloterio.navItems
 })
 
 const mapDispatchToProps = dispatch => ({ setNavItems: () => dispatch(getNavItems()) })

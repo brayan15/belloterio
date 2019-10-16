@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import Bellotorio from './Bellotorio'
+import Belloterio from './Belloterio'
 
 const rootReducer = combineReducers({
-  Bellotorio
+  Belloterio
 })
 
 export default rootReducer

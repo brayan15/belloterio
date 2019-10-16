@@ -2,7 +2,7 @@ import { GET_MENU } from '../constants/types'
 
 const initialState = {}
 
-const Bellorotio = (state = initialState, action) => {
+const Belloterio = (state = initialState, action) => {
   switch (action.type) {
     case GET_MENU:
       return {
@@ -14,4 +14,4 @@ const Bellorotio = (state = initialState, action) => {
   }
 }
 
-export default Bellorotio
+export default Belloterio
