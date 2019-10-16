@@ -8,13 +8,14 @@ import { getNavItems } from '../../../actions/apiCall'
 import logo from '../../../statics/images/bellotero.png'
 import './GlobalNav.scss'
 
-class GlobalNav extends Component {
+export class GlobalNav extends Component {
   componentDidMount() {
     const { setNavItems } = this.props
     setNavItems()
   }
 
   render() {
+    const { navItems } = this.props
     return (
       <div className="nav-bar">
         <Container maxWidth="lg" className="h-100">
@@ -23,8 +24,8 @@ class GlobalNav extends Component {
               <img src={logo} alt="logo" />
             </a>
             <ul className="nav-bar__list">
-              {this.props.navItems &&
-                this.props.navItems.map(({ text, route }) => (
+              {navItems &&
+                navItems.map(({ text, route }) => (
                   <li className="nav-bar__item" key={text}>
                     <NavLink exact to={route} className="nav-bar__link">
                       {text}
@@ -40,12 +41,11 @@ class GlobalNav extends Component {
 }
 
 GlobalNav.propTypes = {
-  setNavItems: PropTypes.func,
+  setNavItems: PropTypes.func.isRequired,
   navItems: PropTypes.arrayOf(PropTypes.shape({}))
 }
 
 GlobalNav.defaultProps = {
-  setNavItems: () => null,
   navItems: []
 }
 
