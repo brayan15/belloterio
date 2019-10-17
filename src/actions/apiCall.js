@@ -1,6 +1,12 @@
 import { GET_MENU } from '../constants/types'
 import { getNavService } from '../services/dataApi'
 
+// test action and async function
+// https://redux.js.org/recipes/writing-tests#action-creators
+// https://redux.js.org/recipes/writing-tests#async-action-creators
+// https://redux.js.org/recipes/writing-tests#reducers
+// https://michalzalecki.com/testing-redux-thunk-like-you-always-want-it/
+
 export const getNav = items => ({
   type: GET_MENU,
   navItems: [...items]
