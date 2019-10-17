@@ -1,10 +1,10 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 .env
 # dependencies
-/node_modules
+node_modules/
 
-# testing
-/coverage
+# Coverage directory used by tools like istanbul
+coverage
 
 # production
 /build
