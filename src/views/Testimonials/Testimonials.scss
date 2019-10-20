@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap');
+@import '../../variables.scss';
 
 .testimonials-page {
   padding-top: 120px;
 
   &__title {
     align-items: center;
-    background-color: #071eb3;
+    background-color: $primary-color;
     color: #ffffff;
     display: inline-block;
     font-size: 36px;

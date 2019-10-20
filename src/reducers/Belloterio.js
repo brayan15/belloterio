@@ -1,4 +1,4 @@
-import { GET_MENU, ERROR_REQUEST, GET_HOME_INFO } from '../constants/types'
+import { GET_MENU, ERROR_REQUEST, GET_HOME_INFO, GET_CALCULATOR_INFO } from '../constants/types'
 
 const initialState = {}
 
@@ -13,6 +13,11 @@ const Belloterio = (state = initialState, { type, payload }) => {
       return {
         ...state,
         homeInfo: payload
+      }
+    case GET_CALCULATOR_INFO:
+      return {
+        ...state,
+        configInfo: payload
       }
     case ERROR_REQUEST:
       return {
