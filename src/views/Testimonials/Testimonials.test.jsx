@@ -19,24 +19,22 @@ describe('<Testimonials />', () => {
   })
 
   const defaultProps = {
-    navItems: {
-      slider: {
-        title: 'Our customers love us',
-        reviews: [
-          {
-            name: 'Pete Zahut',
-            position: 'Chief @ Maniak',
-            comment:
-              "It's funny what memory does, isn't it? My favorite holiday tradition might not have happened more than once or twice. But because it is such a good memory, so encapsulating of everything I love about the holidays, in my mind it happened every year. Without fail"
-          },
-          {
-            name: 'Bernabe',
-            position: 'Tech Lead @ Maniak',
-            comment:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed lectus quam. Curabitur ultricies pretium orci nec finibus. Nullam congue quis tortor a tempus. Morbi rutrum, nunc at hendrerit gravida, tortor turpis molestie nibh, vel varius augue ante eu velit.'
-          }
-        ]
-      }
+    homeInfo: {
+      title: 'Our customers love us',
+      reviews: [
+        {
+          name: 'Pete Zahut',
+          position: 'Chief @ Maniak',
+          comment:
+            "It's funny what memory does, isn't it? My favorite holiday tradition might not have happened more than once or twice. But because it is such a good memory, so encapsulating of everything I love about the holidays, in my mind it happened every year. Without fail"
+        },
+        {
+          name: 'Bernabe',
+          position: 'Tech Lead @ Maniak',
+          comment:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed lectus quam. Curabitur ultricies pretium orci nec finibus. Nullam congue quis tortor a tempus. Morbi rutrum, nunc at hendrerit gravida, tortor turpis molestie nibh, vel varius augue ante eu velit.'
+        }
+      ]
     },
     setHomeInfo: jest.fn()
   }
@@ -54,6 +52,7 @@ describe('<Testimonials />', () => {
 
     it('should run TestimonialsContainer component with store', () => {
       const { children } = wrapper.props()
+
       expect(children.props.homeInfo).toEqual({})
     })
   })
@@ -65,7 +64,11 @@ describe('<Testimonials />', () => {
 
     it('Should render with defaults props and items on slide', () => {
       const content = wrapper.find('.testimonials-page__content')
+      const carousel = wrapper.find('CustomCarousel')
+      const title = wrapper.find('.testimonials-page__title')
       expect(content.exists()).toBe(true)
+      expect(carousel.exists()).toBe(true)
+      expect(title.text()).toEqual(defaultProps.homeInfo.title)
       expect(defaultProps.setHomeInfo).toHaveBeenCalled()
     })
   })

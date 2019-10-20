@@ -42,6 +42,7 @@ describe('<CustomCarousel />', () => {
     it('Should render with defaults props and items on slide', () => {
       const content = wrapper.find('Carousel')
       const slide = wrapper.find('.slide-content')
+
       expect(slide).toHaveLength(4)
       expect(content.exists()).toBe(true)
     })

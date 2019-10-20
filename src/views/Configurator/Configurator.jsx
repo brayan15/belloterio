@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
-import Slider from '@material-ui/core/Slider'
+import MaterialSlider from '../../shared/components/MaterialSlider'
 import { setCalculatorInfo } from '../../actions/apiCall'
 
 import './Configurator.scss'
 
-class Configurator extends Component {
+export class Configurator extends Component {
   constructor(props) {
     super(props)
     this.currencyFormat = this.currencyFormat.bind(this)
@@ -76,22 +76,7 @@ class Configurator extends Component {
                     </div>
                   </Grid>
                   <Grid item xs={12}>
-                    <Slider
-                      value={monthlySpending}
-                      min={10}
-                      track="normal"
-                      max={100}
-                      aria-labelledby="continuous-slider"
-                      onChange={this.foodCostSavingChange}
-                      classes={{
-                        root: 'root-slide',
-                        colorPrimary: 'primary-color-slide',
-                        rail: 'rail-slide',
-                        track: 'track-slide',
-                        thumb: 'thumb-slide',
-                        active: 'slide-active'
-                      }}
-                    />
+                    <MaterialSlider value={monthlySpending} minValue={10} maxValue={100} onChange={this.foodCostSavingChange} />
                   </Grid>
                 </Grid>
                 <Grid container className="range-slider slider-two">
@@ -107,22 +92,7 @@ class Configurator extends Component {
                     </div>
                   </Grid>
                   <Grid item xs={12}>
-                    <Slider
-                      value={fullTimeEmployees}
-                      min={1}
-                      track="normal"
-                      max={10}
-                      aria-labelledby="continuous-slider"
-                      onChange={this.estimatedAnualChange}
-                      classes={{
-                        root: 'root-slide',
-                        colorPrimary: 'primary-color-slide',
-                        rail: 'rail-slide',
-                        track: 'track-slide',
-                        thumb: 'thumb-slide',
-                        active: 'slide-active'
-                      }}
-                    />
+                    <MaterialSlider value={fullTimeEmployees} minValue={1} maxValue={10} onChange={this.estimatedAnualChange} />
                   </Grid>
                 </Grid>
               </div>

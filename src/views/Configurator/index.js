@@ -1,3 +1,3 @@
-import Configurator from './Configurator'
+import ConfiguratorContainer from './Configurator'
 
-export default Configurator
+export default ConfiguratorContainer

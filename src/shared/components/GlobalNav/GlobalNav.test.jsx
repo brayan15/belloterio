@@ -36,6 +36,7 @@ describe('<GlobalNav />', () => {
 
     it('should run GlobalNavContainer component with store', () => {
       const { children } = wrapper.props()
+
       expect(children.props.navItems).toEqual([])
     })
   })
