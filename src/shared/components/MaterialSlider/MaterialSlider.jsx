@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Slider from '@material-ui/core/Slider'
 
+import './MaterialSlider.scss'
+
 const MaterialSlider = ({ minValue, maxValue, value, onChange }) => (
   <Slider
     value={value}
