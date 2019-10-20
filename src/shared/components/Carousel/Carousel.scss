@@ -63,7 +63,6 @@
         width: 100%;
   
         .title {
-          color: #161616;
           font-size: 32px;
           font-weight: bold;
           line-height: 1.5;
@@ -78,7 +77,6 @@
       }
   
       &__comment {
-        color: #161616;
         font-size: 24px;
         font-weight: bold;
         letter-spacing: normal;
@@ -86,6 +84,28 @@
   
         p {
           margin: 10px 0 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 599px) {
+    .slide {
+      .slide-content {
+        max-width: 100%;
+
+        &__name {
+          .title {
+            font-size: 20px;
+          }
+
+          .position {
+            font-size: 12px;
+          }
+        }
+
+        &__comment {
+          font-size: 15px;
         }
       }
     }

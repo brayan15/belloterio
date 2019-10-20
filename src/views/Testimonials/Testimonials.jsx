@@ -18,7 +18,7 @@ export class Testimonials extends Component {
     return (
       <Container maxWidth="lg" className="testimonials-page">
         <div className="testimonials-page__content">
-          <div className="testimonials-page__title">{title}</div>
+          <h1 className="testimonials-page__title">{title}</h1>
           {homeInfo.reviews && <CustomCarousel reviews={homeInfo.reviews} />}
         </div>
       </Container>

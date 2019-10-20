@@ -4,12 +4,26 @@
 .body-app {
   background-color: #f9faff;
   height: 100vh;
-  min-height: 600px;
+  min-height: 750px;
   display: flex;
   flex-direction: column;
   font-family: $primary-font;
+  color: #161616;
+
+  @media (max-width: 599px) {
+    height: auto;
+    padding-bottom: 40px;
+  }
 }
 
 .h-100 {
   height: 100%;
+}
+
+.justify-content-f-e {
+  justify-content: flex-end;
+}
+
+.justify-content-s-b {
+  justify-content: space-between;
 }

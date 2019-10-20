@@ -42,3 +42,13 @@
   width: 100%;
   position: absolute;
   top: 0; }
+
+@media (max-width: 599px) {
+  .nav-bar {
+    height: 100px; }
+  .nav-bar__nav {
+    flex-direction: column; }
+  .nav-bar__nav .logo {
+    margin: 10px 0 20px; }
+  .nav-bar__link {
+    font-size: 12px; } }
