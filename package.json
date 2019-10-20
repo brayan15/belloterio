@@ -12,6 +12,7 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-redux": "^7.1.1",
+    "react-responsive-carousel": "^3.1.50",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "redux": "^4.0.4",
@@ -37,6 +38,8 @@
     "eslint-plugin-react-hooks": "^2.1.2",
     "husky": "^3.0.9",
     "lint-staged": "^9.4.2",
+    "moxios": "^0.4.0",
+    "promise": "^8.0.3",
     "redux-devtools": "^3.5.0",
     "redux-mock-store": "^1.5.3"
   },

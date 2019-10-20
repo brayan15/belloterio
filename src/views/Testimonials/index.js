@@ -1,3 +1,3 @@
-import Testimonials from './Testimonials'
+import TestimonialsContainer from './Testimonials'
 
-export default Testimonials
+export default TestimonialsContainer

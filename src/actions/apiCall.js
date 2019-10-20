@@ -1,23 +1,36 @@
-import { GET_MENU } from '../constants/types'
-import { getNavService } from '../services/dataApi'
+import { GET_MENU, ERROR_REQUEST, GET_HOME_INFO } from '../constants/types'
+import { getNavService, getHomeService } from '../services/dataApi'
 
-// test action and async function
-// https://redux.js.org/recipes/writing-tests#action-creators
-// https://redux.js.org/recipes/writing-tests#async-action-creators
-// https://redux.js.org/recipes/writing-tests#reducers
-// https://michalzalecki.com/testing-redux-thunk-like-you-always-want-it/
-
-export const getNav = items => ({
+export const setNav = items => ({
   type: GET_MENU,
-  navItems: [...items]
+  payload: items
 })
 
-export const getNavItems = () => dispatch =>
+export const setHome = slider => ({
+  type: GET_HOME_INFO,
+  payload: slider
+})
+
+export const errorFetchData = payload => ({
+  type: ERROR_REQUEST,
+  payload
+})
+
+export const setNavItems = () => dispatch =>
   getNavService()
-    .then(navItems => {
-      const { items } = navItems
-      dispatch(getNav(items))
+    .then(menu => {
+      const { items } = menu
+      dispatch(setNav(items))
     })
     .catch(error => {
-      console.log(error) // eslint-disable-line
+      dispatch(errorFetchData(error.response.status))
+    })
+
+export const setHomeInfo = () => dispatch =>
+  getHomeService()
+    .then(slider => {
+      dispatch(setHome(slider))
+    })
+    .catch(error => {
+      dispatch(errorFetchData(error.response.status))
     })

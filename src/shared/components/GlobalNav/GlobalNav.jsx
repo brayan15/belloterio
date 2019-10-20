@@ -3,15 +3,14 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import Container from '@material-ui/core/Container'
-import { getNavItems } from '../../../actions/apiCall'
+import { setNavItems } from '../../../actions/apiCall'
 
 import logo from '../../../statics/images/bellotero.png'
 import './GlobalNav.scss'
 
 export class GlobalNav extends Component {
   componentDidMount() {
-    const { setNavItems } = this.props
-    setNavItems()
+    this.props.setNavItems()
   }
 
   render() {
@@ -53,9 +52,7 @@ const mapStateToProps = ({ Belloterio }) => ({
   navItems: Belloterio.navItems
 })
 
-const mapDispatchToProps = dispatch => ({ setNavItems: () => dispatch(getNavItems()) })
-
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  { setNavItems }
 )(GlobalNav)

@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap');
+
 .testimonials-page {
+  padding-top: 120px;
+
   &__title {
     align-items: center;
     background-color: #071eb3;
@@ -10,6 +14,7 @@
     line-height: 1.11;
     letter-spacing: 0.77px;
     max-width: 389px;
+    margin-bottom: 80px;
     padding: 8px 0;
   }
 }

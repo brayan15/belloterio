@@ -1,8 +1,6 @@
 .nav-bar {
   background-color: #ffffff;
-  height: 64px;
-  display: flex;
-  align-items: center; }
+  height: 64px; }
 
 .nav-bar__nav {
   align-items: center;
